@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+ 		<meta charset="utf-8">
+  <title>Videojs</title>
+  <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+ 
+<link href="https://fonts.googleapis.com/css2?family=The+Nautigal:wght@700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Concert+One&family=The+Nautigal:wght@700&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Concert+One&family=Kanit:ital,wght@1,300&family=The+Nautigal:wght@700&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Concert+One&family=Kanit:ital,wght@1,300&family=Mochiy+Pop+P+One&family=Permanent+Marker&family=The+Nautigal:wght@700&display=swap" rel="stylesheet">
+</head>
+<body >
+<nav class="navigation">
+		<ul>
+		<li><a href="#">Home</a></li>
+		<li><a href="#">Video</a></li>
+        <li><a href="#">Trending</a></li>
+        <li><a href="#">About Us</a></li>
+        <div class="search">
+        	<input type="text" name="search" id="search" placeholder="  Search this website">
+        </div>
+    </ul>
+        
+	</nav>
+	<div class="parallax">
+		
+		<h1 class="centre">Video js</br><div>Ultimate Merger<div></h1>
+
+		</div>
+
+		<div class="container">
+				 <div style="margin-top: 100px;">
+	<div style="position: absolute;margin-left:100px">
+		<video height="200" src="1280.mp4" controls autoplay>
+      video not supported
+    </video>
+    <section class="Bolder1">Video 1</section>
+  </div>
+	<div style="float: right;">
+	<video height="200" src="sample_960x400_ocean_with_audio.mp4" controls autoplay>
+        video not supported
+    </video>
+    <div class="Bolder1" >Video 2</div>
+    </div>
+    </div>
+  </br>
+	<div style="margin-top: 200px ;margin-left:30%">
+    <video height="256" src="1280.mp4" id="myVideo" controls autoplay>
+        video not supported
+
+      </video>
+       <div class="Bolder1">Merge Video </div>
+    </div>
+				
+		</div>
+		<footer>
+			<div class="footer-class ">
+				<div class="col-lg4">Visit Us</br>(303) 666-4084
+                  1446 Adams Pl Louisville,</br> Colorado(CO), 80027</div>
+			    <div class="col-lg4">Customer Service</br>Frequently Asked Question</div>
+			    <div class="col-lg4">Mail Us</br>VideojsOfficial@gmail.com</div></br>
+
+			</div>
+		</footer>
+	
+ <script src="jquery-2.1.4.min.js"></script>
+ <script src="script.js"></script>
+ <script>
+ 	$(window).scroll(function(){
+ 		$(".centre").css("opacity",1 - $(window).scrollTop()/150)
+ 	});
+ 	$(window).scroll(function(){
+ 		$(".navigation").css("opacity",0 + $(window).scrollTop()/150)
+ 	});
+
+ </script>
+  <script type='text/javascript'>
+        var count=1;
+    var player=document.getElementById('myVideo');
+    player.addEventListener('ended',myHandler,false);
+    
+    function myHandler(e) {
+        if(!e) 
+        { e = window.event; }
+        count++;
+        if(count==2)
+     	player.src="sample_960x400_ocean_with_audio"+".mp4";
+     	
+        }
+
+</script>
+</body>
+</html>
